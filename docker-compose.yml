@@ -1,10 +1,12 @@
-version: "3.4"
+version: "3.3"
 
 services:
   openresty:
     build:
       context: ./openresty
     image: openresty-letsencrypt-autoreload
+    deploy:
+      mode: global
     volumes:
       - ./mnt/configurations:/configurations
       - ./mnt/content:/content
