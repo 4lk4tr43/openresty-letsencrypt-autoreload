@@ -3,8 +3,8 @@
 import os
 import re
 
-configuration_directory = '/Users/andreaskaufmann/Documents/PyCharm/openresty-letsencrypt-autoreload/mnt/configurations'
-transform_directory = '/Users/andreaskaufmann/Documents/PyCharm/openresty-letsencrypt-autoreload/mnt/transformed'
+configuration_directory = '/configurations'
+transform_directory = '/transformed'
 
 
 def get_block_name(s, i):

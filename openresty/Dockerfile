@@ -1,6 +1,8 @@
 FROM openresty/openresty:xenial
 
-RUN apt update && apt install -y inotify-tools python3
+RUN apt update && apt install -y software-properties-common inotify-tools
+RUN add-apt-repository -y ppa:jonathonf/python-3.6
+RUN apt update && apt install -y python3.6
 RUN luarocks install lua-resty-auto-ssl
 
 RUN mkdir /src
@@ -13,7 +15,6 @@ ADD src/nginx.conf /usr/local/openresty/nginx/conf/
 ADD src/favicon.ico /usr/local/openresty/nginx/html/
 ADD src/start.sh /src/
 ADD src/transform-configurations.py /src/
-ADD src/requirements.txt /src/
 
 RUN chmod +x /src/start.sh
 RUN chmod +x /src/transform-configurations.py
