@@ -1,6 +1,6 @@
 1. docker-compose build
 2. docker stack deploy -c docker-compose.yml [stack-name] or docker-compose up
-3. add conf file to the configurations folder
+3. add conf file to the mnt/configurations/ folder
 
 ```
 # only files with .conf extension are loaded and transformed
