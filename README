@@ -3,6 +3,7 @@
 3. docker stack deploy -c docker-compose.yml [stack-name] or docker-compose up
 4. add conf file to the mnt/configurations/ folder
 
+(NOTE: does not block any domain or ip address from creating certificates)
 ```
 # only files with .conf extension are loaded and transformed
 # to load configurations without transforming use the .nginx extension
