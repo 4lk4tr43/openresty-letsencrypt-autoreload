@@ -1,6 +1,4 @@
-#!/bin/bash
-
-/src/transform-configurations.py
+python3 -c /src/transform-configurations.py
 /usr/local/openresty/bin/openresty
 
 while true; do

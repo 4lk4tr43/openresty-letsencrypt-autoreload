@@ -3,14 +3,15 @@ version: "3.4"
 services:
   openresty:
     build:
-      context: ./openresty
-    image: openresty-letsencrypt-autoreload
-    deploy:
-      mode: global
+      context: openresty
+    network_mode: host
+    restart: always
     volumes:
-      - ./mnt/configurations:/configurations
-      - ./mnt/content:/content
-      - ./mnt/certificates:/etc/resty-auto-ssl
-    ports:
-      - 80:80
-      - 443:443
+      - configurations:/configurations
+      - content:/content
+      - certificates:/etc/resty-auto-ssl
+
+volumes:
+  configurations:
+  content:
+  certificates:
