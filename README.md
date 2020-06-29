@@ -54,3 +54,6 @@ server {
     }
 }
 ```
+
+##### NOTE for Qnap users
+To open port 80 stop the Apache service `/etc/init.d/Qthttpd.sh stop`
