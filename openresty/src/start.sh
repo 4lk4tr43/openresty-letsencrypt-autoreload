@@ -1,8 +1,8 @@
-python3 -c /src/transform-configurations.py
-/usr/local/openresty/bin/openresty
+python3 /src/transform-configurations.py
+openresty
 
 while true; do
     inotifywait -r -e modify,attrib,move_self /configurations/
     /src/transform-configurations.py
-    /usr/local/openresty/bin/openresty -s reload
+    openresty -s reload
 done

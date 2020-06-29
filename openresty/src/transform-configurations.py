@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import os
 import re
 
@@ -166,3 +164,5 @@ for root, dirs, files in os.walk(configuration_directory):
                 modified_server_blocks = transform_server_blocks(get_server_blocks(content, server_block_indices))
                 with open(os.path.join(transform_directory, name), 'x') as transformed_file:
                     transformed_file.write(modify_content(content, server_block_indices, modified_server_blocks))
+
+print('Transform Executed')
